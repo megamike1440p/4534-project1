@@ -3,18 +3,17 @@
 #include <iostream>
 #include <fstream>
 #include "cipher.hpp"
-
-
 class PasswordGenerator
 	{
 		private:
-			fstream inFile;
-			fstream outFile;
+			std::ifstream inFile;
+			std::ofstream outFile;
 			std::string currentUser;
 			std::string currentPassword;
 			std::string encryptedPassword;
 
 		public:
+			PasswordGenerator();
 			std::string generatePassword();
 			void read();
 			void writeToRaw();
