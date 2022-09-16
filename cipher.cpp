@@ -1,3 +1,12 @@
+/***************************************************************
+  Student Name: Michael Whitten
+  File Name: Cipher.cpp
+  Assignment number: Project #1
+
+  This class contains the methods the encrypt a password using the vinegere cipher. Unfortunantly, when reading from a file, the key index is offset by one,
+  meaning that, when reading from a file, the key is effectively "onesj". This problem does not occur when encrypting a password directly. I believe I am reading in
+  a leading whitespace or something like that.
+***************************************************************/
 #include "cipher.hpp"
 
 Cipher::Cipher(std::string passwordToEncrypt){
