@@ -29,11 +29,50 @@ void Cipher::getNumericKey(std::string key){
 
 void Cipher::shuffleCipher(char cipherbet[26], char alphabet[26], std::string key)
 {
+	for (int i = 0; i < 5; i++){
+	
+	}
 
 }
 
 std::string Cipher::encrypt(std::string passwordToEncrypt, char alphabet[26], char cipherbet[26]){
-return "";
 
+	std::string encryptedPassword = "";
+	char letterToSwap;
+	for (int i = 0; i < 9; i++){
+		for (int j = 0; j < 26; j++){
+			if (passwordToEncrypt.at(i) == alphabet[j]){
+				letterToSwap = alphabet[j];
+				std::cout << "current letter to swap: " << letterToSwap << std::endl;
+				encryptedPassword += swapLetter(letterToSwap, i, j);
+			}
+		}
+	}
+	std::cout << encryptedPassword << endl;
+	return encryptedPassword;
+}
 
+char swapLetter(char letterToSwap, int passwordIndex, int alphabetIndex){
+	int cipherIndex;
+	if (passwordIndex > 4)
+	{
+		passwordIndex = passwordIndex % 5;
+	}
+
+	for (int i = 0; i < 26; i++){
+		if(numericKeyPtr[passwordIndex] == alphabetPtr[i])
+		{
+			cipherIndex = i;
+			if(i + j > 25)
+			{
+				letterToSwap = alphabetPtr[(i+j)-25];
+			}
+			else
+			{
+				letterToSwap = alphabetPtr[i+j];
+			}
+			
+		}
+	}
+	return letterToSwap;
 }
