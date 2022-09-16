@@ -2,7 +2,7 @@
 
 int main()
 {
-	Cipher cipher("data");
+	Cipher cipher("datadatad");
 	//std::cout << "numeric key = " << cipher.getNumericKey("jones") << std::endl;
 	/*if (cipher.getNumericKey("jones") == "914848")
 		std::cout << "test successful" << std::endl;
