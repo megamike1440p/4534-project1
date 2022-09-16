@@ -3,6 +3,7 @@
 
 int main()
 {
-	Cipher cipher("datadatad");
-	PasswordGenerator passwordGenerator;
+	Cipher cipher;
+	cipher.encrypt("datadataz");
+	//PasswordGenerator passwordGenerator;
 }

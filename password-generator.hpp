@@ -6,6 +6,7 @@
 class PasswordGenerator
 	{
 		private:
+			char* alphabetPtr;
 			std::ifstream inFile;
 			std::ofstream outFile;
 			std::string currentUser;

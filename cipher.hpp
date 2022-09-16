@@ -13,8 +13,8 @@ class Cipher
 			int* numericKeyPtr;
 
 		public:
-
 			Cipher(std::string passwordToEncrypt);
+			char* getAlphabetPtr();
 			//~Cipher();
 			void getNumericKey(std::string key);
 			void shuffleCipher(char cipherbet[26], char alphabet[26], std::string key);

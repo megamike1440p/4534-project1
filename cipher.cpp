@@ -1,13 +1,13 @@
 #include "cipher.hpp"
 
-Cipher::Cipher(std::string passwordToEncrypt){
+Cipher::Cipher(std::char passwordToEncrypt){
+	std::cout<<"default constructor called [cipher]" << std::endl;
 	char alphabet[26] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 	int numericKey[5] = {};
 	numericKeyPtr = numericKey;
 	alphabetPtr = alphabet;
 	this->key = "jones";
 	getNumericKey(key);
-	std::cout << "constructor complete, beginning encryption of chosen password: " << passwordToEncrypt << std::endl;
 	encrypt(passwordToEncrypt);
 }
 
@@ -19,6 +19,7 @@ void Cipher::getNumericKey(std::string key){
 			if (key.at(i) == alphabetPtr[j])
 			{
 				numericKeyPtr[i] = j;
+				std::cout << numericKeyPtr[i] << std::endl;
 			}
 		}
 	}
@@ -29,7 +30,8 @@ void Cipher::shuffleCipher(char cipherbet[26], char alphabet[26], std::string ke
 }
 
 std::string Cipher::encrypt(std::string passwordToEncrypt){
-	
+	std::cout << "encrypt called" << std::endl << ", password to encrypt: " << passwordToEncrypt << std::endl;
+
 	std::string encryptedPassword = "";
 	char letterToSwap;
 	for (int i = 0; i < 9; i++){
@@ -37,11 +39,12 @@ std::string Cipher::encrypt(std::string passwordToEncrypt){
 			if (passwordToEncrypt.at(i) == alphabetPtr[j]){
 				letterToSwap = alphabetPtr[j];
 				encryptedPassword += swapLetter(letterToSwap, i, j);
+
+				std::cout << encryptedPassword << std::endl;
 			}
 		}
 	}
-	std::cout << passwordToEncrypt << std::endl;
-	std::cout << encryptedPassword << std::endl;
+	std::cout << "encrypted password = " << encryptedPassword;
 	return encryptedPassword;
 }
 
