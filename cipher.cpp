@@ -60,14 +60,12 @@ char Cipher::swapLetter(char letterToSwap, int passwordIndex, int alphabetIndex)
 			if(cipherIndex + alphabetIndex > 25)
 			{
 				letterToSwap = alphabetPtr[(cipherIndex+alphabetIndex)-26];
-				std::cout << "letter swapped with: " << letterToSwap << std::endl;
 				return letterToSwap;
 			}
 			
 			else
 			{
 				letterToSwap = alphabetPtr[cipherIndex+alphabetIndex];
-				std::cout << "letter swapped with: " << letterToSwap << std::endl;
 				return letterToSwap;
 			}
 		}
