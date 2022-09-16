@@ -7,7 +7,8 @@ Cipher::Cipher(std::string passwordToEncrypt){
 	alphabetPtr = alphabet;
 	this->key = "jones";
 	getNumericKey(key);
-	std::cout << "constructor complete" << std::endl;
+	std::cout << "constructor complete, beginning encryption of chosen password: " << passwordToEncrypt << std::endl;
+
 }
 
 void Cipher::getNumericKey(std::string key){
