@@ -1,3 +1,12 @@
+/***************************************************************
+  Student Name: Michael Whitten
+  File Name: password-generator.cpp
+  Assignment number: Project #1
+
+  This file contains methods to generate a password, and read/write usernames and passwords from files. I had working sequence protection, but I broke it trying to fix
+  other issues. It wasn't worth it.
+***************************************************************/
+
 #include "password-generator.hpp"
 #include "cipher.hpp"
 #include <cstdlib>
